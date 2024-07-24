@@ -1,26 +1,187 @@
+/* アニメーションを定義 */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: "Noto Sans JP", sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
+    background-color: antiquewhite;
+    animation: fadeIn 1s ease-in;
 }
 
-h1 {
-    color: #333;
-    margin-top: 50px;
+.main {
+    width: 375px;
+    max-width: 100vw;
+    margin: auto;
+    background-color: #ffff;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.header {
+    padding: 1vw 0;
 }
 
-button:hover {
-    background-color: #0056b3;
+.fv {
+    position: relative;
+    background: url(../img/back01.png);
+    background-size: 100% 100%;
+}
+
+.fv_img01 {
+    padding-top: 1vw;
+}
+
+.fv_img02 {
+    padding-top: 2vw;
+}
+
+.fv_img04 {
+    position: absolute;
+    top: 9%;
+    right: 11%;
+    width: 85px;
+    height: 85px;
+    animation: rotate 20s linear infinite;
+    transform-origin: center; /* 回転の中心を画像の中心に設定 */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes infinity-scroll-left {
+    from {
+      transform: translateX(0);
+    }
+      to {
+      transform: translateX(-100%);
+    }
+    }
+    .scroll-infinity__wrap {
+      display: flex;
+      overflow: hidden;
+      margin-top: -15%;
+    }
+    .scroll-infinity__list {
+      display: flex;
+      list-style: none;
+      padding: 0
+    }
+    .scroll-infinity__list--left {
+      animation: infinity-scroll-left 110s infinite linear 0s both;
+    }
+    .scroll-infinity__item {
+      width: calc(500vw / 6);
+    }
+    .scroll-infinity__item>img {
+      width: 100%;
+    }
+
+  
+.sec01 {
+    background: url(../img/back02.png);
+    background-size: 100% 100%;
+}
+
+.sec01_img02 {
+    padding-top: 2vw;
+}
+
+.sec01_img03 {
+    padding-top: 2.5vw;
+    padding-bottom: 13vw;
+}
+
+.sec01_img04 {
+    padding-bottom: 3vw;
+}
+
+.sec02 {
+    background: url(../img/back03.png);
+    background-size: 100% 100%;
+    padding-top: 2.5vw;
+}
+
+.sec03 {
+    background: url(../img/back04.png);
+    background-size: 100% 100%;
+    padding-top: 2.5vw;
+}
+
+/* sec04 */
+.sec04 {
+    background: url(../img/img18.png);
+    background-size: 100% 100%;
+    position: relative;
+    height: 912px;
+}
+
+.sec04 .represent_slick01 {
+    top: 30% !important;
+}
+
+.represent_slick01 .slick-img img {
+    width: 300px !important;
+    margin: auto !important;
+    border-radius: 15px !important;
+}
+
+.slick-prev {
+    left: 30% !important;
+    top: 110% !important;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 30% !important;
+    top: 110% !important;
+    z-index: 1;
+}
+
+.slick-dots li {
+    margin: 0 !important;
+}
+
+.sec05 {
+    background: url(../img/img19.png);
+    background-size: 100% 100%;
+    position: relative;
+    height: 822px;
+}
+
+.sec05 .represent_slick01 {
+    top: 25% !important;
+}
+
+.sec06 {
+    background: url(../img/img20.png);
+    background-size: 100% 100%;
+    position: relative;
+    height: 814px;
+}
+
+.sec06 .represent_slick01 {
+    top: 25% !important;
+}
+
+.sec08 {
+    position: relative;
+}
+
+.sec08_img02 {
+    position: absolute;
+    bottom: 9%;
+    left: 18%;
 }

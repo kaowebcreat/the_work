@@ -1,3 +1,7 @@
-document.getElementById('myButton').addEventListener('click', function() {
-    alert('ボタンがクリックされました！');
-});
+
+$(function () {
+    $(".represent_slick01").slick({
+      autoplay: true,
+      dots: true,
+    });
+  });
