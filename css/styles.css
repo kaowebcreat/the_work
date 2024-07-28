@@ -35,28 +35,32 @@ body {
     animation: fadeIn 1s ease-in;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 751px) {
     body {
         background-image: url('../img/pc_back.png');
         background-attachment: fixed; /* 背景画像を固定 */
-        background-size: cover; /* 背景画像を要素のサイズに合わせて調整 */
+        background-size: cover !important; /* 背景画像を要素のサイズに合わせて調整 */
         background-position: center; /* 背景画像の位置を中央に設定 */
+        background-repeat: no-repeat;
       }
     .main {
-        margin-right: 8% !important;
+        margin-right: 0% !important;
+        margin-left: 52vw !important;
         background-color: #ffff;
+        box-shadow: 0px 5px 15px 0px rgba(21, 21, 21, 0.038);
     }
 
     .menu {
         display: block !important;
+        opacity: 1;
         position: fixed;
-        width: min(365px,48.666666666666667vw);
+        width: 365px;
         top: 15%;
-        left: 15%;
+        right: 56vw;
     }
 
     .menu_item {
-        width: min(266px,35.466666666666667vw);
+        width: 266px;
         margin: auto;
     }
     .Prologue {
@@ -65,7 +69,7 @@ body {
 }
 
 .main {
-    width: 750px;
+    width: 375px;
     max-width: 100vw;
     margin: auto;
     background-color: #ffff;
@@ -88,24 +92,24 @@ body {
   }  
 
 .fv_img02 {
-    width: min(670px,89.333333333333333vw);
+    width: 335px;
     position: absolute;
-    bottom: 14.5%;
+    bottom: 15.5%;
     left: 5%;
 }
 
 .fv_img03 {
-    width: min(80px,10.666666666666667vw);
-    margin: min(435px,58vw) auto 0;
-    padding-bottom: min(15px, 2vw);
+    width: 40px;
+    margin: 217.5px auto 0;
+    padding-bottom: 7.5px;
 }
 
 .fv_img04 {
     position: absolute;
     top: 5%;
     right: 11%;
-    width: min(175px,23.333333333333333vw);
-    height: min(175px,23.333333333333333vw);
+    width: 87.5px;
+    height: 87.5px;
     animation: rotate 20s linear infinite;
     transform-origin: center; /* 回転の中心を画像の中心に設定 */
 }
@@ -130,7 +134,7 @@ body {
     .scroll-infinity__wrap {
       display: flex;
       overflow: hidden;
-      margin-top: -15%;
+      margin-top: -17%;
     }
     .scroll-infinity__list {
       display: flex;
@@ -141,15 +145,10 @@ body {
       animation: infinity-scroll-left 110s infinite linear 0s both;
     }
     .scroll-infinity__item {
-      width: calc(800vw / 6);
+      width: 600px;
     }
     .scroll-infinity__item>img {
       width: 100%;
-    }
-    @media (min-width: 750px) {
-        .scroll-infinity__item {
-            width: 900px;
-        }
     }
   
 .sec01 {
@@ -158,32 +157,32 @@ body {
 }
 
 .sec01_img01 {
-    width: min(680px,90.666vw);
+    width: 340px;
     margin: auto;
     padding-top: 4%;
 }
 
 .sec01_img02 {
-    width: min(596px,79.466666666666667vw);
+    width: 298px;
     margin: auto;
     padding-top: 5%;
 }
 
 .sec01_img03 {
-    width: min(590px,78.666666666666667vw);
+    width: 295px;
     margin: auto;
     padding-top: 8%;
 }
 
 .sec01_img04 {
-    width: min(228px,30.4vw);
+    width: 114px;
     margin: auto;
     padding-top: 25%;
 }
 
 .sec01_img05 {
     padding-top: 5%;
-    width: min(720px,96vw);
+    width: 360px;
     margin: auto;
 }
 
@@ -195,7 +194,7 @@ body {
 
 
 .sec02_img01 {
-    width: min(512px,68.266666666666667vw);
+    width: 256px;
     margin: auto;
 }
 
@@ -207,7 +206,7 @@ body {
 
 
 .sec03_img01 {
-    width: min(600px,80vw);
+    width: 300px;
     margin: auto;
 }
 
@@ -216,11 +215,11 @@ body {
     background: url(../img/img18.png);
     background-size: 100% 100%;
     position: relative;
-    height: min(1759px,234.533333333333333vw);
+    height: 879.5px;
 }
 
 .sec04_h2 {
-    width: min(184px,24.533333333333333vw);
+    width: 92px;
     padding: 11% 0 0 0;
     margin: auto;
 }
@@ -235,20 +234,20 @@ body {
 }
 
 .represent_slick01 .slick-img img {
-    width: min(590px,78.666666666666667vw) !important;
+    width: 295px !important;
     margin: auto !important;
     border-radius: 15px !important;
 }
 
 .slick-prev:before {
     content: '＜' !important;
-    font-size: min(24px,3.2vw) !important;
+    font-size: 12px !important;
     font-weight: 600;
 }
 
 .slick-next:before {
     content: '＞' !important;
-    font-size: min(24px,3.2vw) !important;
+    font-size: 12px !important;
     font-weight: 600;
 }
 
@@ -290,7 +289,7 @@ body {
     background: url(../img/img19.png);
     background-size: 100% 100%;
     position: relative;
-    height: min(1631px,217.466666666666667vw);
+    height: 815.5px;
 }
 
 .sec05 .represent_slick01 {
@@ -301,7 +300,7 @@ body {
     background: url(../img/img20.png);
     background-size: 100% 100%;
     position: relative;
-    height: min(1631px,217.466666666666667vw);
+    height: 815.5px;
 }
 
 .sec06 .represent_slick01 {
@@ -312,7 +311,7 @@ body {
     background: url(../img/img20_1.png);
     background-size: 100% 100%;
     position: relative;
-    height: min(1631px,217.466666666666667vw);
+    height: 815.5px;
 }
 
 .sec07 .represent_slick01 {
@@ -325,7 +324,7 @@ body {
 
 .sec08_h1 {
     position: absolute;
-    width: min(192px,25.6vw);
+    width: 96px;
     top: 12%;
     left: 37%;
 }
@@ -336,14 +335,148 @@ body {
 
 .sec09_h1 {
     position: absolute;
-    width: min(224px,29.866666666666667vw);
+    width: 112px;
     top: 8%;
     left: 35%;
 }
 
 .sec09_img02 {
     position: absolute;
-    bottom: 10%;
+    bottom: 8.5%;
     left: 17.5%;
-    width: min(488px,65.066666666666667vw);
+    width: 244px;
 }
+
+
+
+@media (max-width: 750px) {
+
+    .main {
+        width: 750px;
+        max-width: 100vw;
+    }
+
+    .fv_img02 {
+        width: min(670px,89.333333333333333vw);
+    }
+
+    .fv_img03 {
+        width: min(80px,10.666666666666667vw);
+        margin: min(435px,58vw) auto 0;
+        padding-bottom: min(15px, 2vw);
+    }
+
+    .fv_img04 {
+        width: min(175px,23.333333333333333vw);
+        height: min(175px,23.333333333333333vw);
+    }
+
+    .scroll-infinity__item {
+    width: calc(800vw / 6);
+    }
+
+    .sec01_img01 {
+        width: min(680px,90.666vw);
+    }
+
+    .sec01_img02 {
+        width: min(596px,79.466666666666667vw);
+    }
+
+    .sec01_img03 {
+        width: min(590px,78.666666666666667vw);
+    }
+
+    .sec01_img04 {
+        width: min(228px,30.4vw);
+    }
+
+    .sec01_img05 {
+        width: min(720px,96vw);
+    }
+
+    .sec02_img01 {
+        width: min(512px,68.266666666666667vw);
+    }
+
+    .sec03_img01 {
+        width: min(600px,80vw);
+    }
+
+    /* sec04 */
+    .sec04 {
+        height: min(1759px,234.533333333333333vw);
+    }
+
+    .sec04_h2 {
+        width: min(184px,24.533333333333333vw);
+    }
+
+    .represent_slick01 {
+        width: 80%;
+    }
+
+    .represent_slick01 .slick-img img {
+        width: min(590px,78.666666666666667vw) !important;
+    }
+
+    .slick-prev:before {
+        font-size: min(24px,3.2vw) !important;
+    }
+
+    .slick-next:before {
+        font-size: min(24px,3.2vw) !important;
+    }
+
+    .sec05 {
+        height: min(1631px,217.466666666666667vw);
+    }
+
+    .sec06 {
+        height: min(1631px,217.466666666666667vw);
+    }
+
+    .sec07 {
+        height: min(1631px,217.466666666666667vw);
+    }
+
+    .sec08_h1 {
+        width: min(192px,25.6vw);
+    }
+
+    .sec09_h1 {
+        width: min(224px,29.866666666666667vw);
+    }
+
+    .sec09_img02 {
+        width: min(488px,65.066666666666667vw);
+    }
+
+}
+
+/*アニメーション用CSS*/
+.updown{
+    /* アニメーションの名前 */
+    animation-name:UpDown;
+    /* アニメーションの１回分の長さ */
+    animation-duration: 1.5s;
+    /* アニメーションの回数 */
+    animation-iteration-count: infinite;
+    /* アニメーションの進行具合 */
+    animation-timing-function: ease-in-out;
+    /* アニメーション再生の向き */
+    animation-direction: alternate;
+    }
+    /* アニメーションの設定 */
+    @keyframes UpDown{
+    /* 開始地点 */
+    0%{
+    /* Y軸0px */
+    transform: translateY(-20px);
+    }
+    /* 終了地点 */
+    100%{
+    /* Y軸50px */
+    transform: translateY(0px);
+    }
+    }
