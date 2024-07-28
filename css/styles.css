@@ -14,6 +14,9 @@
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 .fade-in-section.is-visible {
     opacity: 1;
     transform: none;
@@ -28,8 +31,37 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: antiquewhite;
+    background-color: #FFE0E6;
     animation: fadeIn 1s ease-in;
+}
+
+@media (min-width: 750px) {
+    body {
+        background-image: url('../img/pc_back.png');
+        background-attachment: fixed; /* 背景画像を固定 */
+        background-size: cover; /* 背景画像を要素のサイズに合わせて調整 */
+        background-position: center; /* 背景画像の位置を中央に設定 */
+      }
+    .main {
+        margin-right: 8% !important;
+        background-color: #ffff;
+    }
+
+    .menu {
+        display: block !important;
+        position: fixed;
+        width: min(365px,48.666666666666667vw);
+        top: 15%;
+        left: 15%;
+    }
+
+    .menu_item {
+        width: min(266px,35.466666666666667vw);
+        margin: auto;
+    }
+    .Prologue {
+        margin-top: -100%;
+    }
 }
 
 .main {
@@ -114,7 +146,11 @@ body {
     .scroll-infinity__item>img {
       width: 100%;
     }
-
+    @media (min-width: 750px) {
+        .scroll-infinity__item {
+            width: 900px;
+        }
+    }
   
 .sec01 {
     background: url(../img/back02.png);
@@ -147,18 +183,32 @@ body {
 
 .sec01_img05 {
     padding-top: 5%;
+    width: min(720px,96vw);
+    margin: auto;
 }
 
 .sec02 {
     background: url(../img/back03.png);
     background-size: 100% 100%;
-    padding-top: 2.5vw;
+    padding-top: 5%;
+}
+
+
+.sec02_img01 {
+    width: min(512px,68.266666666666667vw);
+    margin: auto;
 }
 
 .sec03 {
     background: url(../img/back04.png);
     background-size: 100% 100%;
-    padding-top: 2.5vw;
+    padding-top: 5%;
+}
+
+
+.sec03_img01 {
+    width: min(600px,80vw);
+    margin: auto;
 }
 
 /* sec04 */
@@ -166,17 +216,58 @@ body {
     background: url(../img/img18.png);
     background-size: 100% 100%;
     position: relative;
-    height: 912px;
+    height: min(1759px,234.533333333333333vw);
+}
+
+.sec04_h2 {
+    width: min(184px,24.533333333333333vw);
+    padding: 11% 0 0 0;
+    margin: auto;
+}
+
+.represent_slick01 {
+    width: 80%;
+    margin: auto;
 }
 
 .sec04 .represent_slick01 {
-    top: 30% !important;
+    top: 19% !important;
 }
 
 .represent_slick01 .slick-img img {
-    width: 300px !important;
+    width: min(590px,78.666666666666667vw) !important;
     margin: auto !important;
     border-radius: 15px !important;
+}
+
+.slick-prev:before {
+    content: '＜' !important;
+    font-size: min(24px,3.2vw) !important;
+    font-weight: 600;
+}
+
+.slick-next:before {
+    content: '＞' !important;
+    font-size: min(24px,3.2vw) !important;
+    font-weight: 600;
+}
+
+.slick-dots {
+    bottom: -16% !important;
+    color: #ffff !important;
+}
+
+.represent_slick01 .slick-dots li.slick-active button:before {
+    color: white; /* 選択されたドットの色を白に変更 */
+}
+
+.represent_slick01 .slick-dots li button:before {
+    color: rgba(255, 255, 255, 0.5); /* 選択されていないドットを薄い白に */
+  }
+  
+.represent_slick01 .slick-dots li button:hover:before,
+.represent_slick01 .slick-dots li.slick-active button:before {
+    color: rgba(255, 255, 255, 1); /* ホバー時と選択時に濃い白に */
 }
 
 .slick-prev {
@@ -199,7 +290,7 @@ body {
     background: url(../img/img19.png);
     background-size: 100% 100%;
     position: relative;
-    height: 822px;
+    height: min(1631px,217.466666666666667vw);
 }
 
 .sec05 .represent_slick01 {
@@ -210,10 +301,21 @@ body {
     background: url(../img/img20.png);
     background-size: 100% 100%;
     position: relative;
-    height: 814px;
+    height: min(1631px,217.466666666666667vw);
 }
 
 .sec06 .represent_slick01 {
+    top: 25% !important;
+}
+
+.sec07 {
+    background: url(../img/img20_1.png);
+    background-size: 100% 100%;
+    position: relative;
+    height: min(1631px,217.466666666666667vw);
+}
+
+.sec07 .represent_slick01 {
     top: 25% !important;
 }
 
@@ -221,8 +323,27 @@ body {
     position: relative;
 }
 
-.sec08_img02 {
+.sec08_h1 {
     position: absolute;
-    bottom: 9%;
-    left: 18%;
+    width: min(192px,25.6vw);
+    top: 12%;
+    left: 37%;
+}
+
+.sec09 {
+    position: relative;
+}
+
+.sec09_h1 {
+    position: absolute;
+    width: min(224px,29.866666666666667vw);
+    top: 8%;
+    left: 35%;
+}
+
+.sec09_img02 {
+    position: absolute;
+    bottom: 10%;
+    left: 17.5%;
+    width: min(488px,65.066666666666667vw);
 }

@@ -12,7 +12,7 @@ $(function () {
             var elementTop = $(this).offset().top;
             var viewportBottom = $(window).scrollTop() + $(window).height();
 
-            if (elementTop < viewportBottom - 100) { // 100px earlier than element comes into view
+            if (elementTop < viewportBottom - 180) { // 100px earlier than element comes into view
                 $(this).addClass('is-visible');
             }
         });
