@@ -83,8 +83,16 @@ body {
 
 .fv_img01 {
     padding-top: 1vw;
+    width: 295px;
+    margin: auto;
 }
 
+@media (max-width: 750px) {
+    .fv_img01 {
+        width: min(590px, 78.666666666666667vw);
+        margin: auto;
+    }
+}
 
 .fv_img01 .fade-in {
     opacity: 0;
